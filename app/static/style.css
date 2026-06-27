@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f4f7fb;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.5;
+}
+
+form{
+    width:90%;
+    max-width:750px;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+    color:#0d47a1;
+    font-size:36px;
+}
+
+.intro{
+    text-align:center;
+    color:#555;
+    margin-bottom:25px;
+}
+
+h2{
+    color:#1565c0;
+    margin-top:30px;
+    margin-bottom:15px;
+}
+
+label{
+    font-weight:bold;
+}
+
+.hint{
+    color:#666;
+    font-size:13px;
+    display:block;
+    margin-top:4px;
+    margin-bottom:8px;
+}
+
+input,
+select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    margin-top:5px;
+    margin-bottom:15px;
+    font-size:15px;
+}
+
+input,
+select,
+button{
+    transition:0.3s ease;
+}
+
+input:focus,
+select:focus{
+    border-color:#1976d2;
+    outline:none;
+    box-shadow:0 0 8px rgba(25,118,210,.25);
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#1976d2;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-bottom:10px;
+}
+
+button:hover{
+    background:#0d47a1;
+    transform:translateY(-2px);
+}
+
+.reset-btn{
+    background:#dc3545;
+}
+
+.reset-btn:hover{
+    background:#bb2d3b;
+}
+
+hr{
+    margin-top:30px;
+}
+
+.result{
+    margin-top:30px;
+    padding:20px;
+    background:#e8f5e9;
+    border-left:6px solid #2e7d32;
+    border-radius:10px;
+    text-align:center;
+    animation:fadeIn .6s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.result h2{
+    color:#2e7d32;
+    font-size:30px;
+}
+
+.result h1{
+    color:#2e7d32;
+    font-size:56px;
+    margin:15px 0;
+}
+
+.excellent{
+    color:green;
+    font-weight:bold;
+}
+
+.good{
+    color:#1565c0;
+    font-weight:bold;
+}
+
+.average{
+    color:#ef6c00;
+    font-weight:bold;
+}
+
+.poor{
+    color:red;
+    font-weight:bold;
+}
+
+.disclaimer{
+    margin-top:20px;
+    font-size:13px;
+    color:#666;
+    font-style:italic;
+}
+
+footer{
+    margin-top:30px;
+    padding:12px;
+    text-align:center;
+    background:#1565c0;
+    color:white;
+    font-size:14px;
+}
+
+footer p{
+    margin:0;
+}
+
+@keyframes fadeIn{
+
+from{
+    opacity:0;
+    transform:translateY(20px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+@media(max-width:768px){
+
+form{
+    width:95%;
+    padding:20px;
+}
+
+h1{
+    font-size:28px;
+}
+
+.result h1{
+    font-size:42px;
+}
+
+button{
+    font-size:16px;
+}
+
+}

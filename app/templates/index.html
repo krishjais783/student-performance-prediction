@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Student Performance Prediction</h1>
+
+<form action="/predict" method="POST">
+
+    <p class="intro">
+        Fill in the details below to predict the student's final academic performance using a Machine Learning model.
+    </p>
+
+    <h2>Student Information</h2>
+
+    <label>Age</label><br>
+    <small class="hint">Student age (15–22 years)</small>
+    <input type="number" name="age" min="15" max="22" required><br><br>
+
+    <h2>Family Information</h2>
+
+    <label>Mother's Education</label><br>
+    <select name="Medu" required>
+        <option value="" selected disabled>-- Select --</option>
+        <option value="0">No Education</option>
+        <option value="1">Primary School</option>
+        <option value="2">Middle School</option>
+        <option value="3">High School</option>
+        <option value="4">Higher Education</option>
+    </select><br><br>
+
+    <label>Father's Education</label><br>
+    <select name="Fedu" required>
+        <option value="" selected disabled>-- Select --</option>
+        <option value="0">No Education</option>
+        <option value="1">Primary School</option>
+        <option value="2">Middle School</option>
+        <option value="3">High School</option>
+        <option value="4">Higher Education</option>
+    </select><br><br>
+
+    <h2>Academic Information</h2>
+
+    <label>Study Time</label><br>
+    <select name="studytime" required>
+        <option value="" selected disabled>-- Select --</option>
+        <option value="1">Less than 2 hours/week</option>
+        <option value="2">2–5 hours/week</option>
+        <option value="3">5–10 hours/week</option>
+        <option value="4">More than 10 hours/week</option>
+    </select><br><br>
+
+    <label>Failures</label><br>
+    <select name="failures" required>
+        <option value="" selected disabled>-- Select --</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3 or more</option>
+    </select><br><br>
+
+    <label>School Support</label><br>
+    <select name="schoolsup" required>
+        <option value="" selected disabled>-- Select --</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select><br><br>
+
+    <label>Family Support</label><br>
+    <select name="famsup" required>
+        <option value="" selected disabled>-- Select --</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select><br><br>
+
+    <label>Paid Classes</label><br>
+    <select name="paid" required>
+        <option value="" selected disabled>-- Select --</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select><br><br>
+
+    <h2>Learning Resources</h2>
+
+    <label>Plans for Higher Education</label><br>
+    <select name="higher" required>
+        <option value="" selected disabled>-- Select --</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select><br><br>
+
+    <label>Internet Access</label><br>
+    <select name="internet" required>
+        <option value="" selected disabled>-- Select --</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select><br><br>
+
+    <h2>Previous Grades</h2>
+
+    <label>First Internal Exam (0–20)</label><br>
+    <input type="number" name="G1" min="0" max="20" required><br><br>
+
+    <label>Second Internal Exam (0–20)</label><br>
+    <input type="number" name="G2" min="0" max="20" required><br><br>
+
+    <label>Absences</label><br>
+    <small class="hint">Number of school absences</small>
+    <input type="number" name="absences" min="0" max="93" required><br><br>
+
+    <button type="submit">Predict Final Grade</button>
+    <button type="reset" class="reset-btn">Reset</button>
+
+    {% if prediction %}
+    <div class="result">
+        <h2>Prediction Result</h2>
+
+        <h1>{{ prediction }}/20</h1>
+
+        {% if prediction >= 16 %}
+            <p class="excellent">Excellent Performance 🎉</p>
+
+        {% elif prediction >= 12 %}
+            <p class="good">Good Performance 👍</p>
+
+        {% elif prediction >= 8 %}
+            <p class="average">Average Performance 🙂</p>
+
+        {% else %}
+            <p class="poor">Needs Improvement 📚</p>
+        {% endif %}
+    </div>
+    {% endif %}
+    </form>
+    
+    <footer>
+        <hr>
+        <p>&copy; 2026 Student Performance Prediction | Developed by Krish Jaiswal</p>
+    </footer>
+
+</body>
+</html>
+
