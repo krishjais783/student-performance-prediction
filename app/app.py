@@ -4,7 +4,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-model = joblib.load("models/best_model.pkl")
+model = joblib.load("../models/best_model.pkl")
 
 @app.route("/")
 def home():
@@ -97,4 +97,4 @@ def predict():
     return render_template("index.html", prediction=predicted_grade)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
