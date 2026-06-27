@@ -145,15 +145,15 @@ http://127.0.0.1:5000
 
 ### 🏠 Home Page
 
-![Home Page](images/home.png)
+![Home Page](images/Home.png)
 
 ### 📝 Filled Form
 
-![Filled Form](images/form.png)
+![Filled Form](images/Form.png)
 
 ### 📈 Prediction Result
 
-![Prediction Result](images/result.png)
+![Prediction Result](images/Result.png)
 
 ---
 
