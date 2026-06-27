@@ -101,6 +101,16 @@ http://127.0.0.1:5000
 
 ---
 
+Live Deployment
+Hosted on AWS EC2 using:
+- Ubuntu Server
+- Flask
+- Python
+- AWS EC2
+- Git
+
+--
+
 ## 📈 Machine Learning Workflow
 
 * Data Cleaning
