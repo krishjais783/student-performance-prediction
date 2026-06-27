@@ -1,6 +1,6 @@
 # 🎓 Student Performance Prediction using Machine Learning
 
-A Machine Learning web application built with **Python, Flask, and Scikit-Learn** to predict a student's final grade based on academic, family, and lifestyle factors.
+A Machine Learning web application built using Flask, Scikit-Learn, and AWS EC2 that predicts students' final grades based on academic, family, and lifestyle factors.
 
 ---
 
@@ -12,6 +12,7 @@ A Machine Learning web application built with **Python, Flask, and Scikit-Learn*
 * Real-time prediction
 * Performance feedback based on predicted score
 * Machine Learning model integration
+* AWS EC2 Deployment
 
 ---
 
@@ -24,12 +25,31 @@ A Machine Learning web application built with **Python, Flask, and Scikit-Learn*
 * Scikit-Learn
 * HTML
 * CSS
+* Git
+* GitHub
+* AWS EC2
+* Gunicorn
+* Nginx
+* Ubuntu
+
+---
+
+## 🧠 Machine Learning Model
+
+Model Used: Random Forest Regressor
+
+Target Variable: G3 (Final Grade)
+
+Evaluation Metric:
+- R² Score
+- MAE
+- RMSE
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 Student-Performance-Prediction
 │
 ├── app
@@ -52,8 +72,14 @@ Student-Performance-Prediction
 │   ├── 06_Random_Forest.ipynb
 │   └── 07_Model_Comparison.ipynb
 │
+├── images
+│   ├── home.png
+│   ├── form.png
+│   └── result.png
+│
 ├── requirements.txt
 ├── README.md
+├── LICENSE
 └── .gitignore
 ```
 
@@ -73,12 +99,24 @@ The target variable is the student's **Final Grade (G3)**.
 
 ---
 
-## ⚙ Installation
+## 🎯 Project Objective
+
+The goal of this project is to build a Machine Learning model capable of predicting a student's final academic performance using demographic, academic, and social attributes. The trained model is deployed as a Flask web application on AWS EC2 for real-time predictions.
+
+--
+
+## ⚙️ Installation
 
 Clone the repository:
 
 ```bash
-git clone <repository-link>
+git clone https://github.com/krishjais783/student-performance-prediction.git
+```
+
+Move into the project directory:
+
+```bash
+cd student-performance-prediction
 ```
 
 Install dependencies:
@@ -95,27 +133,56 @@ python app/app.py
 
 Open your browser:
 
-```
+```text
 http://127.0.0.1:5000
 ```
 
+> **Note:** Replace the repository URL above with your actual GitHub repository URL before publishing.
+
 ---
 
-Live Deployment
-Hosted on AWS EC2 using:
-- Ubuntu Server
-- Flask
-- Python
-- AWS EC2
-- Git
+## 📸 Screenshots
 
---
+### 🏠 Home Page
+
+![Home Page](images/home.png)
+
+### 📝 Filled Form
+
+![Filled Form](images/form.png)
+
+### 📈 Prediction Result
+
+![Prediction Result](images/result.png)
+
+---
+
+## 🌐 Live Demo
+
+👉 http://43.204.38.212
+
+---
+
+## ☁️ Live Deployment
+
+Hosted on AWS EC2 using:
+
+* Ubuntu Server
+* Flask
+* Gunicorn
+* Nginx
+* Python
+* AWS EC2
+* Git
+
+---
 
 ## 📈 Machine Learning Workflow
 
 * Data Cleaning
-* Exploratory Data Analysis
+* Exploratory Data Analysis (EDA)
 * Feature Engineering
+* Data Preprocessing
 * Model Training
 * Model Evaluation
 * Model Comparison
@@ -125,11 +192,34 @@ Hosted on AWS EC2 using:
 
 ## 🎯 Future Improvements
 
-* AWS Deployment
+* Docker Support
+* HTTPS
+* Custom Domain
+* Database Integration
+* Analytics Dashboard
 * Responsive UI
 * User Authentication
-* Database Integration
 * Student Report Generation
+
+---
+
+## 📊 Model Performance
+
+**Best Model:** Random Forest Regressor
+
+| Metric   | Score |
+| -------- | ----: |
+| R² Score |  0.84 |
+| MAE      |  0.75 |
+| RMSE     |  1.24 |
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+See the **LICENSE** file for more details.
 
 ---
 
@@ -137,7 +227,7 @@ Hosted on AWS EC2 using:
 
 **Krish Jaiswal**
 
-BCA (Hons.) Artificial Intelligence & Data Science
+**BCA (Hons.) – Artificial Intelligence & Data Science**
 
-Machine Learning • Data Science • Python • Flask
+Machine Learning | Data Science | Python | Flask | AWS
 
